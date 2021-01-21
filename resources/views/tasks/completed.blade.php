@@ -8,7 +8,7 @@
             @include('tasks.create')
         </div>
         @include('tasks.navtabs')    
-        @include('tasks.index')
+        @include('tasks.indexCompleted')
     </div>        
 @else
 

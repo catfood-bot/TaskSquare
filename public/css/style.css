@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+    body{
+        background-color: #afddfa;
+    }
+
+    .taskTitle{
+        text-decoration: none;
+        color: #333333;
+    }
+    
+    .taskTitle:hover{
+        text-decoration: none;
+        color: #AAAAAA;
+    }
+
+    .finish{
+        color: #333333;
+    }
+    
+    .form-check-label{
+        font-size: 0.8rem;
+        color: #FFF;
+    }
+    
+    .label-priority{
+        font-size: 0.8rem;
+        color: #FFF;
+    }
+    
+    .label-progress{
+        font-size: 0.8rem;
+        color: #FFF;
+    }
+    
+    .label-radio{
+        color: #FFF;
+    }
+    
+    .btn-create{
+        height: 50%;
+    }
+    
+    
