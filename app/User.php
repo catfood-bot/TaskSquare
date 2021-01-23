@@ -12,6 +12,7 @@ use App\User;
 
 use App\Task;
 
+use App\Group;
 
 class User extends Authenticatable
 {
@@ -52,5 +53,10 @@ class User extends Authenticatable
     public function messages()
     {
         return $this->hasMany(Message::class);
+    }
+    
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
     }
 }

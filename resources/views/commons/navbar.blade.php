@@ -1,7 +1,7 @@
 <header class="mb-4">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         
-        {!! link_to_route('tasks.index', 'original', [], ['class' => 'navbar-brand']) !!}
+        {!! link_to_route('tasks.index', 'TaskSquare', [], ['class' => 'navbar-brand']) !!}
 
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
             <span class="navbar-toggler-icon"></span>

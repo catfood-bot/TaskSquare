@@ -12,15 +12,14 @@ use App\Group;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Group extends Model
 {
     protected $fillable = [
-        'title', 'finish', 'progress', 'memo',
+        'group_name'
     ];
     
-    
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(User::class);
     }
 }
