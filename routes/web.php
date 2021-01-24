@@ -25,4 +25,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController');
     Route::resource('messages', 'MessagesController');
     Route::get('completed', 'TasksController@completed')->name('tasks.completed');
+    Route::any('complete', 'TasksController@complete')->name('tasks.complete');
 });
+

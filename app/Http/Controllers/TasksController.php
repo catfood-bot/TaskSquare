@@ -138,8 +138,21 @@ class TasksController extends Controller
         $task->memo = $request->memo;
         $task->save();
         
-        return redirect('/');
+        return redirect()->route('tasks.index');
     }
+    
+    public function complete(Request $request)
+    {
+        $id = $request->input('task_id');
+        
+        $task = Task::findOrFail($id);
+        
+        $task->progress = '完了';
+        $task->save();
+        
+        return redirect()->route('tasks.index');
+    }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -155,7 +168,7 @@ class TasksController extends Controller
             $task->delete();
         }
         
-        return redirect('/');
+        return redirect()->route('tasks.index');
     }
     
     public function completed()
