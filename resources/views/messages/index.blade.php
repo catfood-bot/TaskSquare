@@ -10,7 +10,6 @@
                     @foreach($users as $user)
                         <li class="list-group-item">
                             {{ $user->name }}
-                            <span class="badge badge-secondary">{{ $user->tasks_count }}</span>
                         </li>
                     @endforeach
                 </ul>

@@ -4,12 +4,13 @@
 
     <div class="border rounded p-3 bg-light">
         <h4>{{ $task->title }}</h4>
-        
-        {!! link_to_route('tasks.edit', '編集', ['task' => $task->id], ['class' => 'btn btn-success float-left mr-2 mb-2']) !!}
-        
-        {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
-            {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
-        {!! Form::close() !!}
+        @if (Auth::id() == $task->user_id)
+            {!! link_to_route('tasks.edit', '編集', ['task' => $task->id], ['class' => 'btn btn-success float-left mr-2 mb-2']) !!}
+            
+            {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
+                {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
+            {!! Form::close() !!}
+        @endif
         
             <table class="table table-bordered table-striped">
                 <tr>
