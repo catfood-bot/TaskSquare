@@ -5,7 +5,7 @@
             <tr>
                 <td>
                     <a class="taskTitle" href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
-                    <a href="{{route("tasks.complete",  ['task_id'=>$task->id]) }}" class="btn btn-sm btn-info float-right">完了</a>
+                    <a href="{{route("tasks.complete",  ['task_id'=>$task->id]) }}" class="btn btn-sm btn-success text-white float-right">完了</a>
                 </td>
             </tr>
             
