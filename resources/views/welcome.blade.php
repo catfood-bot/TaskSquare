@@ -12,7 +12,7 @@
     </div>        
 @else
 
-    <div class="center jumbotron">
+    <div class="center bg-white jumbotron">
         <div class="text-center">
             <h1>TaskSquare</h1>
             
